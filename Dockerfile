@@ -27,9 +27,6 @@ RUN chown -R 1001:0 /usr/local/tomcat && chmod -R ug+rw /usr/local/tomcat
 USER 1001
 
 #
-RUN mkdir /config
-WORKDIR /config
-RUN touch a.txt && touch b.txt 
 WORKDIR $CATALINA_HOME
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
